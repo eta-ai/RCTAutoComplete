@@ -140,7 +140,6 @@ static void RCTUpdatePlaceholder(AutoCompleteView *self)
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeChange
                                    reactTag:self.reactTag
                                        text:self.text
-                                        key:nil
                                  eventCount:_nativeEventCount];
 }
 
@@ -149,7 +148,6 @@ static void RCTUpdatePlaceholder(AutoCompleteView *self)
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeEnd
                                    reactTag:self.reactTag
                                        text:self.text
-                                        key:nil
                                  eventCount:_nativeEventCount];
 }
 - (void)textFieldSubmitEditing
@@ -157,7 +155,6 @@ static void RCTUpdatePlaceholder(AutoCompleteView *self)
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeSubmit
                                    reactTag:self.reactTag
                                        text:self.text
-                                        key:nil
                                  eventCount:_nativeEventCount];
 }
 
@@ -171,7 +168,6 @@ static void RCTUpdatePlaceholder(AutoCompleteView *self)
     [_eventDispatcher sendTextEventWithType:RCTTextEventTypeFocus
                                    reactTag:self.reactTag
                                        text:self.text
-                                        key:nil
                                  eventCount:_nativeEventCount];
 }
 
@@ -191,7 +187,6 @@ static void RCTUpdatePlaceholder(AutoCompleteView *self)
         [_eventDispatcher sendTextEventWithType:RCTTextEventTypeBlur
                                        reactTag:self.reactTag
                                            text:self.text
-                                            key:nil
                                      eventCount:_nativeEventCount];
     }
     return result;
